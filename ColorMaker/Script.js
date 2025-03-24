@@ -72,7 +72,7 @@ function color() {
             return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase()}`;
         },
 
-        hslToHex: (h, s, l) => {
+        hslToHex: function (h, s, l) {
             return this.rgbToHex(...this.hslToRgb(h, s, l));
         }
     };
