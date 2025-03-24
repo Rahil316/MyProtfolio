@@ -1,7 +1,6 @@
 function color() {
     return {
-        // Convert HEX to RGB
-        hexToRgb: (hex) => {
+        hexToRgb: function (hex) {
             hex = hex.replace(/^#/, "");
             if (hex.length === 3) {
                 hex = hex.split("").map(x => x + x).join("");
@@ -10,8 +9,7 @@ function color() {
             return [(bigint >> 16) & 255, (bigint >> 8) & 255, bigint & 255];
         },
 
-        // Convert RGB to HSL
-        rgbToHsl: (r, g, b) => {
+        rgbToHsl: function (r, g, b) {
             r /= 255, g /= 255, b /= 255;
             let max = Math.max(r, g, b), min = Math.min(r, g, b);
             let h, s, l = (max + min) / 2;
@@ -31,29 +29,24 @@ function color() {
             return [h, Math.round(s * 100), Math.round(l * 100)];
         },
 
-        // Convert HEX to HSL
-        hexToHsl: (hex) => {
-            let [r, g, b] = hexToRgb(hex);
-            return rgbToHsl(r, g, b);
+        hexToHsl: function (hex) {
+            let [r, g, b] = this.hexToRgb(hex);
+            return this.rgbToHsl(r, g, b);
         },
 
-        // Convert HEX to Hue only
-        hexToHue: (hex) => {
-            return hexToHsl(hex)[0];
+        hexToHue: function (hex) {
+            return this.hexToHsl(hex)[0];
         },
 
-        // Convert HEX to Saturation only
-        hexToSat: (hex) => {
-            return hexToHsl(hex)[1];
+        hexToSat: function (hex) {
+            return this.hexToHsl(hex)[1];
         },
 
-        // Convert HEX to Lightness only
-        hexToLum: (hex) => {
-            return hexToHsl(hex)[2];
+        hexToLum: function (hex) {
+            return this.hexToHsl(hex)[2];
         },
 
-        // Convert HSL to RGB
-        hslToRgb: (h, s, l) => {
+        hslToRgb: function (h, s, l) {
             s /= 100;
             l /= 100;
             let c = (1 - Math.abs(2 * l - 1)) * s;
@@ -75,16 +68,19 @@ function color() {
             ];
         },
 
-        // Convert RGB to HEX
-        rgbToHex: (r, g, b) => {
+        rgbToHex: function (r, g, b) {
             return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase()}`;
         },
 
-        // Convert HSL to HEX
         hslToHex: (h, s, l) => {
-            return rgbToHex(...hslToRgb(h, s, l));
-        },
-    }
+            return this.rgbToHex(...this.hslToRgb(h, s, l));
+        }
+    };
 }
 
-console.log(color.hexToHsl("004433"));
+// Usage
+console.log(color().hexToHsl("#004433")); // [162, 100, 13]
+console.log(color().hexToHue("#004433")); // 162
+console.log(color().hexToSat("#004433")); // 100
+console.log(color().hexToLum("#004433")); // 13
+console.log(color().hslToHex(162, 100, 13)); // "#004433"
