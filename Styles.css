@@ -1,7 +1,11 @@
+/* https://rahil316.github.io/MyProtfolio/index.html */
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Roboto";
+  color: #fff;
+  font-weight: 400;
 }
 body {
   background-color: #121212;
@@ -18,23 +22,159 @@ body {
   flex-wrap: wrap;
 }
 
-/* Typescale */
-.tx13 {
-  font-size: 13px;
+/* paddings*/
+.p-8 {
+  padding: 8px;
 }
-.tx16 {
+.p-16 {
+  padding: 16px;
+}
+.p-24 {
+  padding: 24px;
+}
+.p-32 {
+  padding: 32px;
+}
+.pb-8 {
+  padding-bottom: 8px;
+}
+.pb-16 {
+  padding-bottom: 16px;
+}
+.pb-24 {
+  padding-bottom: 24px;
+}
+.pb-32 {
+  padding-bottom: 32px;
+}
+
+.pt-8 {
+  padding-top: 8px;
+}
+.pt-16 {
+  padding-top: 16px;
+}
+.pt-24 {
+  padding-top: 24px;
+}
+.pt-32 {
+  padding-top: 32px;
+}
+.pl-8 {
+  padding-left: 8px;
+}
+.pl-16 {
+  padding-left: 16px;
+}
+.pl-24 {
+  padding-left: 24px;
+}
+.pl-32 {
+  padding-left: 32px;
+}
+.pr-8 {
+  padding-right: 8px;
+}
+.pr-16 {
+  padding-right: 16px;
+}
+.pr-24 {
+  padding-right: 24px;
+}
+.pr-32 {
+  padding-right: 32px;
+}
+
+/* margins */
+
+.m-8 {
+  margin: 8px;
+}
+.m-16 {
+  margin: 16px;
+}
+.m-24 {
+  margin: 24px;
+}
+.m-32 {
+  margin: 32px;
+}
+.mb-8 {
+  margin-bottom: 8px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+.mt-16 {
+  margin-top: 16px;
+}
+.mt-24 {
+  margin-top: 24px;
+}
+.mt-32 {
+  margin-top: 32px;
+}
+.ml-8 {
+  margin-left: 8px;
+}
+.ml-16 {
+  margin-left: 16px;
+}
+.ml-24 {
+  margin-left: 24px;
+}
+.ml-32 {
+  margin-left: 32px;
+}
+.mr-8 {
+  margin-right: 8px;
+}
+.mr-16 {
+  margin-right: 16px;
+}
+.mr-24 {
+  margin-right: 24px;
+}
+.mr-32 {
+  margin-right: 32px;
+}
+
+/* positions */
+
+.abs {
+  position: absolute;
+}
+.rel {
+  position: relative;
+}
+.fix {
+  position: fixed;
+}
+
+/* Typescale */
+.tx-16 {
   font-size: 16px;
 }
-.tx21 {
+.tx-21 {
   font-size: 21px;
 }
-.tx27 {
+.tx-27 {
   font-size: 27px;
 }
-.tx36 {
+.tx-36 {
   font-size: 36px;
 }
-.tx54 {
+.tx-54 {
   font-size: 54px;
 }
 .bold {
@@ -43,9 +183,15 @@ body {
 .semi {
   font-weight: 600;
 }
-.normal {
-  font-weight: 400;
-}
 .light {
   font-weight: 300;
+}
+.tx-l {
+  text-align: left;
+}
+.tx-r {
+  text-align: right;
+}
+.tx-c {
+  text-align: center;
 }
