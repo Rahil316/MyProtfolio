@@ -6,3 +6,46 @@
 body {
   background-color: #121212;
 }
+.flex-v {
+  display: flex;
+  flex-direction: column;
+}
+.flex-h {
+  display: flex;
+  flex-direction: row;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* Typescale */
+.tx13 {
+  font-size: 13px;
+}
+.tx16 {
+  font-size: 16px;
+}
+.tx21 {
+  font-size: 21px;
+}
+.tx27 {
+  font-size: 27px;
+}
+.tx36 {
+  font-size: 36px;
+}
+.tx54 {
+  font-size: 54px;
+}
+.bold {
+  font-weight: 800;
+}
+.semi {
+  font-weight: 600;
+}
+.normal {
+  font-weight: 400;
+}
+.light {
+  font-weight: 300;
+}
